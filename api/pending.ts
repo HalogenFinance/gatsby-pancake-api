@@ -10,7 +10,7 @@ const getBalanceNumber = (balance: any, decimals = 18) => {
 };
 
 const pending = async (pid: number, address: string) => {
-  const chef = getContract(chefABI, "0x73feaa1eE314F8c655E354234017bE2193C9E24E");
+  const chef = getContract(chefABI, "0x06BBc02b33781f2305997a57aC75AeC769C0C9Cd");
   const pending = await chef.methods.pendingToast(pid, address).call();
   const poolInfo = await chef.methods.poolInfo(pid).call();
   return {
